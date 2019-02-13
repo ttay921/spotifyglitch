@@ -60,6 +60,20 @@ app.get('/search-track', function (request, response) {
     });
 });
 
+app.get('/category-playlists', function (request, response) {
+  
+  // Get playlists from a browse category
+  // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
+  spotifyApi.getPlaylistsForCategory('decades', { limit : 10})
+    .then(function(data) {
+    
+    // Send the list of playlists
+    response.send(data.body.playlists);
+    
+  }, function(err) {
+    console.error(err);
+  });
+});
 
 //SECOND COUNTRY
 app.get('/category-playlists', function (request, response) {
@@ -79,6 +93,9 @@ app.get('/category-playlists', function (request, response) {
 
 app.get('/audio-features', function (request, response) {
   
+  //Get track title
+  spotifyApi.getTrack('4uLU6hMCjMI75M1A2tKUQC')
+    
   // Get the audio features for a track ID
   spotifyApi.getAudioFeaturesForTrack('4uLU6hMCjMI75M1A2tKUQC')
     .then(function(data) {
@@ -89,9 +106,8 @@ app.get('/audio-features', function (request, response) {
     }, function(err) {
       console.error(err);
     });
-  //Get track title
-  spotifyApi.getTracks('4uLU6hMCjMI75M1A2tKUQC')
- 
+  
+  
 });
   
   
