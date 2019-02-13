@@ -64,7 +64,7 @@ app.get('/category-playlists', function (request, response) {
   
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
-  spotifyApi.getPlaylistsForCategory('toplists', { limit : 10})
+  spotifyApi.getPlaylistsForCategory('decades', { limit : 10})
     .then(function(data) {
     
     // Send the list of playlists
@@ -79,7 +79,7 @@ app.get('/category-playlists', function (request, response) {
   
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
-  spotifyApi.getPlaylistsForCategory('Variété française', { limit : 10})
+  spotifyApi.getPlaylistsForCategory('french_variety', { country: 'FR', limit : 10})
     .then(function(data) {
     
     // Send the list of playlists
@@ -103,7 +103,9 @@ app.get('/audio-features', function (request, response) {
       console.error(err);
     });
 });
-
+    function spotifyAPi.getTracks('4uLU6hMCjMI75M1A2tKUQC') {
+    console.log(data)
+    };
 
 app.get('/artist', function (request, response) {
   
