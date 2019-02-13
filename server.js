@@ -97,6 +97,9 @@ app.get('/category-playlists', function (request, response) {
 
 app.get('/audio-features', function (request, response) {
   
+  var trackTitle = spotifyApi.getTrack('4uLU6hMCjMI75M1A2tKUQC');
+  
+  
   // Get the audio features for a track ID
   spotifyApi.getAudioFeaturesForTrack('4uLU6hMCjMI75M1A2tKUQC')
     .then(function(data) {
@@ -104,8 +107,7 @@ app.get('/audio-features', function (request, response) {
       //Send the audio features object
       response.send(data.body);
     
-      //get track
-      spotifyApi.getTrack();
+
     
     }, function(err) {
       console.error(err);
