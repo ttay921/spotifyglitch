@@ -104,6 +104,9 @@ app.get('/audio-features', function (request, response) {
       //Send the audio features object
       response.send(data.body);
     
+      //get track
+      spotifyApi.getTrack();
+    
     }, function(err) {
       console.error(err);
     });
