@@ -49,7 +49,8 @@ $(function() {
     console.groupEnd();
     
     //Display Title
-   
+    var disTrack= $('<h3>' + data.name + '</h3>');
+    disTrack.appendTo('#audio-features-container');
     
     // The audio features we want to show
     var keys = ["danceability", "energy", "acousticness", "loudness", "speechiness"]
