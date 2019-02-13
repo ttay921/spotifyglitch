@@ -117,7 +117,7 @@ app.get('/audio-features', function (request, response) {
 app.get('/artist', function (request, response) {
   
   // Get information about an artist
-  spotifyApi.getArtist('6jJ0s89eD6GaHleKKya26X')
+  spotifyApi.getArtist('7tYKF4w9nC0nq9CsPZTHyP')
     .then(function(data) {
     
       // Send the list of tracks
@@ -131,7 +131,7 @@ app.get('/artist', function (request, response) {
 app.get('/artist-top-tracks', function (request, response) {
   
   // Get an artist's top tracks in a country
-  spotifyApi.getArtistTopTracks('0LcJLqbBmaGUft1e9Mm8HV', 'FR')
+  spotifyApi.getArtistTopTracks('7tYKF4w9nC0nq9CsPZTHyP', 'FR')
     .then(function(data) {
     
       // Send the list of tracks

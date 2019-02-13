@@ -79,8 +79,15 @@ $(function() {
     data.genres.map(function(genre, i) {
       var genreItem = $('<p>' + genre + '</p>');
       genreItem.appendTo('#artist-container');
+      
+    // Display the artist's popularity
+    data.popularity.map(function(popularity, i) {
+      var popularityItem = $('<p>' + popularity + '</p>');
+      popularityItem.appendTo('#artist-container');
+      
     });
   });
+});
   
   $.get('/artist-top-tracks', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
