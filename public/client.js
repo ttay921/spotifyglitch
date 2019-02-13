@@ -48,6 +48,9 @@ $(function() {
     console.log(data);
     console.groupEnd();
     
+    //Display Title
+    
+    
     // The audio features we want to show
     var keys = ["danceability", "energy", "acousticness", "loudness", "speechiness"]
     
