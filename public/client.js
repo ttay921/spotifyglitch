@@ -80,11 +80,11 @@ $(function() {
     trackName.appendTo('#artist-container');
     
      // Display the artist followers
-    var followerCount = $('<h3>' + data.followers.total + '</h3>');
+    var followerCount = $('<h3>' + 'Followers : ' + data.followers.total + '</h3>');
     followerCount.appendTo('#artist-container');
     
      // Display the artist popularity
-    var popularity = $('<h3>' + data.popularity + '</h3>');
+    var popularity = $('<h3> Popularity : ' +data.popularity + '</h3>');
     popularity.appendTo('#artist-container');
     
     // Display the artist's genres
