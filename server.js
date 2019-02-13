@@ -64,7 +64,7 @@ app.get('/category-playlists', function (request, response) {
   
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
-  spotifyApi.getPlaylistsForCategory('hiphop', { limit : 10, offset: 0 })
+  spotifyApi.getPlaylistsForCategory('toplists', { limit : 10})
     .then(function(data) {
     
     // Send the list of playlists
