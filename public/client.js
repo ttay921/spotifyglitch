@@ -57,6 +57,7 @@ $(function() {
         var feature = $('<p><span class="big-number">' + data[key] + ' </span>'  + key + '</p>');
         feature.appendTo('#audio-features-container');
       }
+      
     });
   });
   
@@ -80,12 +81,7 @@ $(function() {
       var genreItem = $('<p>' + genre + '</p>');
       genreItem.appendTo('#artist-container');
       
-    // Display the artist's popularity
-    data.popularity.map(function(popularity, i) {
-      var popularityItem = $('<p>' + popularity + '</p>');
-      popularityItem.appendTo('#artist-container');
-      
-    });
+   
   });
 });
   
